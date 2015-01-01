@@ -14,5 +14,8 @@
     ],
     "forum": "https://forums.uberent.com/threads/rel-ant4lyf-mod.66937/",
     "icon": "http://i.imgur.com/QdYWxyu.png",
-    "enabled": true
+    "enabled": true,
+	"dependencies": [
+		"com.pa.antlyf.ui"
+  ]  
 }
