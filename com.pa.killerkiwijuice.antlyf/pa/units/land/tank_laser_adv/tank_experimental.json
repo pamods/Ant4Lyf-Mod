@@ -1,0 +1,168 @@
+{
+    "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+    "display_name": "Experimental Giant Leveler",
+    "description": "This giant tank will destroy anything in it's path with awesome cannons and side mounted coaxial machine guns.",
+    "max_health": 17800,
+    "atrophy_rate": 50.5,
+    "atrophy_cool_down": 10,
+    "build_metal_cost": 21500,
+    "attachable": {
+        "offsets": {
+            "root": [
+                0,
+                0,
+                0
+            ],
+            "head": [
+                0,
+                0,
+                10.200001
+            ]
+        }
+    },
+    "unit_types": [
+        "UNITTYPE_Tank",
+        "UNITTYPE_Mobile",
+        "UNITTYPE_Offense",
+        "UNITTYPE_Land",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_CombatFabAdvBuild"
+    ],
+    "command_caps": [
+        "ORDER_Move",
+        "ORDER_Patrol",
+        "ORDER_Attack",
+        "ORDER_Assist",
+        "ORDER_Use",
+        "ORDER_FireSecondaryWeapon"
+    ],
+    "transportable": {
+        "size": 1
+    },
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/ammo/nuke_pbaoe/nuke_pbaoe.json",
+        "air_ammo_spec": "/pa/ammo/nuke_pbaoe/nuke_pbaoe_air.json",
+        "air_height_threshold": 50
+    },
+    "guard_layer": "WL_LandHorizontal",
+    "navigation": {
+        "type": "land-small",
+        "acceleration": 30,
+        "brake": 30,
+        "move_speed": 7,
+        "turn_speed": 30
+    },
+    "physics": {
+        "radius": 25,
+        "push_class": 110
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 140
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/land/tank_laser_adv/tank_experimental.papa",
+        "animtree": "/pa/anim/anim_trees/tank_laser_adv_anim_tree.json",
+        "arrows": 5
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/land/tank_laser_adv/tank_laser_adv_tool_weapon.json",
+            "aim_bone": "socket_aim",
+            "muzzle_bone": "socket_leftMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_rightRightMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_rightLeftMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_leftRightMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_leftLeftMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_backRightMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/air/gunship/gunship_tool_weapon.json",
+            "aim_bone": "bone_root",
+            "muzzle_bone": "socket_backLeftMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/land/tank_laser_adv/gunship_tool_weapon.json",
+            "aim_bone": "socket_aim",
+            "muzzle_bone": "socket_coaxMuzzle"
+        },
+        {
+            "spec_id": "/pa/units/land/tank_laser_adv/tank_laser_adv_tool_weapon.json",
+            "aim_bone": "socket_aim",
+            "muzzle_bone": "socket_rightMuzzle"
+        },
+		{
+            "spec_id": "/pa/tools/uber_cannon/uber_cannon_experimental.json",
+            "aim_bone": "bone_turret",
+            "muzzle_bone": "socket_rightMuzzle",
+            "secondary_weapon": true
+        },
+		{  "spec_id":"/pa/units/land/tank_heavy_laser/tank_squisher_tool_weapon.json",
+			"aim_bone":"bone_root",
+			"muzzle_bone":"bone_root",
+			"show_range":false
+		}
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/veh",
+            "effect_scale": 3
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/veh/tank_T2_leveler socket_leftMuzzle /SE/Weapons/veh/tank_T2_leveler socket_rightMuzzle /SE/Weapons/air/gunship_fire socket_leftRightMuzzle /SE/Weapons/air/gunship_fire socket_leftLeftMuzzle /SE/Weapons/air/gunship_fire socket_rightRightMuzzle /SE/Weapons/air/gunship_fire socket_rightLeftMuzzle /SE/Weapons/air/gunship_fire socket_backRightMuzzle /SE/Weapons/air/gunship_fire socket_backLeftMuzzle /SE/Weapons/air/gunship_fire socket_coaxMuzzle",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_leftMuzzle /pa/effects/specs/tank_muzzle_flash.pfx socket_rightMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_leftRightMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_leftLeftMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_rightRightMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_rightLeftMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_backRightMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_backLeftMuzzle /pa/units/air/gunship/gunship_muzzle_flash.pfx socket_coaxMuzzle",
+            "effect_scale": 3
+        },
+        "died": {
+            "audio_cue": "/SE/Death/Veh",
+            "effect_scale": 4.8
+        }
+    },
+    "audio": {
+        "loops": {
+            "move": {
+                "cue": "/SE/Movement/veh/tank_leveler_loop_T2",
+                "flag": "vel_changed",
+                "should_start_func": "is_moving",
+                "should_stop_func": "is_not_moving"
+            }
+        },
+        "selection_response": {
+            "cue": "/SE/Selection/veh/tank_leveler_T2"
+        }
+    },
+    "TEMP_texelinfo": 10.3794,
+    "mesh_bounds": [
+        20.400002,
+        22.5,
+        10.799999
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "context": "server",
+    "identifier": "com.pa.killerkiwijuice.antlyf",
+    "display_name": "Ant4Lyf Mod",
+    "description": "Parallel version of Dox4Lyf, includes giant ants and an Experimental Uber Ant",
+    "author": "KillerKiwiJuice",
+    "version": "1.0",
+    "build": "76557",
+    "date": "2014/12/31",
+    "signature": "not yet implemented",
+    "category": [
+        "in-game",
+        "server-mod"
+    ],
+    "forum": "https://forums.uberent.com/threads/rel-ant4lyf-mod.66937/",
+    "icon": "http://i.imgur.com/QdYWxyu.png",
+    "enabled": true
+}
