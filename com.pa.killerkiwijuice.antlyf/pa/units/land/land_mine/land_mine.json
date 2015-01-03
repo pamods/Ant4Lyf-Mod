@@ -27,7 +27,7 @@
   "recon":{
     "observable":{
       "layer":"surface_and_air",
-      "ignore_sight":false,
+      "ignore_sight":true,
       "ignore_radar":true
     },
     "observer":{
