@@ -5,7 +5,7 @@
     "max_health": 17800,
     "atrophy_rate": 50.5,
     "atrophy_cool_down": 10,
-    "build_metal_cost": 21500,
+    "build_metal_cost": 19500,
     "attachable": {
         "offsets": {
             "root": [
