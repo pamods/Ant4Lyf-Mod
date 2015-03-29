@@ -67,12 +67,7 @@
       "spec_id":"/pa/units/land/tank_heavy_armor/tank_heavy_armor_tool_weapon.json",
       "aim_bone":"bone_turret",
       "muzzle_bone":"socket_muzzle"
-    },
-	{
-      "spec_id":"/pa/units/land/tank_heavy_armor/tank_heavy_armor_flame_tool_weapon.json",
-      "aim_bone":"bone_turret",
-      "muzzle_bone":"socket_muzzle"
-	}
+    }
   ],
   "events":{
     "build_complete":{
