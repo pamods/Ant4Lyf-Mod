@@ -11,7 +11,7 @@
             0
         ]
     },
-    "damage": 700,
+    "damage": 1000,
     "splash_damage": 0,
     "splash_radius": 0,
     "initial_velocity": 250,
