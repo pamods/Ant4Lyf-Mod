@@ -64,6 +64,7 @@
 	  "/pa/units/land/laser_defense_adv/laser_defense_adv.json",
 
       "/pa/units/land/tank_light_laser/tank_light_laser.json",
+      "/pa/units/land/tank_destroyer/tank_destroyer.json",
       "/pa/units/land/tank_explosive/tank_explosive.json",
 	  "/pa/units/land/tank_heavy_laser/tank_heavy_laserX.json",
 	  "/pa/units/land/tank_laser_adv/tank_experimental.json",

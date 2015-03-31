@@ -70,6 +70,7 @@ $(document).ready(function () {
             'sea_mine',
             'tank_heavy_laserX',
             'tank_light_laser',
+            'tank_destroyer',
             'tank_heavy_mortar',
             'fabrication_vehicle_adv',
             'fabrication_vehicle',
