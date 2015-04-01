@@ -5,7 +5,7 @@
     "max_health": 17800,
     "atrophy_rate": 50.5,
     "atrophy_cool_down": 10,
-    "build_metal_cost": 1,
+    "build_metal_cost": 19500,
     "attachable": {
         "offsets": {
             "root": [
@@ -26,7 +26,7 @@
         "UNITTYPE_Offense",
         "UNITTYPE_Land",
         "UNITTYPE_Advanced",
-        "UNITTYPE_CombatFabBuild",
+        "UNITTYPE_CombatFabAdvBuild",
 		"UNITTYPE_Custom1"
     ],
     "command_caps": [
