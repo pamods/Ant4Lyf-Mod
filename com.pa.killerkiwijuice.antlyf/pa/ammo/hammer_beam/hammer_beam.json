@@ -1,0 +1,6 @@
+{
+    "ammo_type": "AMMO_Beam",
+    "fx_collision_spec": "/pa/effects/specs/skitter_beam_hit.pfx",
+    "collision_audio": "/SE/Impacts/laser_blast",
+    "damage": 0
+}

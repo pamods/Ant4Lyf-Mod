@@ -25,7 +25,8 @@
         "UNITTYPE_Land",
         "UNITTYPE_Advanced",
         "UNITTYPE_FactoryBuild",
-        "UNITTYPE_CannonBuildable"
+        "UNITTYPE_CannonBuildable",
+		"UNITTYPE_Custom1"
     ],
     "transportable": {
         "size": 1
@@ -49,7 +50,7 @@
                     "layer": "surface_and_air",
                     "channel": "sight",
                     "shape": "capsule",
-                    "radius": 160
+                    "radius": 140
                 }
             ]
         }

@@ -19,7 +19,7 @@
     "lifetime": 4,
     "events": {
         "died": {
-            "effect_spec": "/pa/effects/specs/default_explosion.pfx"
+            "effect_spec": "/pa/effects/specs/skitter_beam_hit.pfx"
         }
     }
 }

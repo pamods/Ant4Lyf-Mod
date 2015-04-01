@@ -1,0 +1,9 @@
+{
+  "base_spec": "/pa/ammo/skitter_beam/skitter_beam.json",
+  "damage": 10,
+    "fx_beam_spec": "/pa/effects/specs/skitter_beam.pfx",
+    "fx_collision_spec": "",
+  "lifetime": 10,
+  "splash_damage": 0,
+  "splash_radius": 0
+}
