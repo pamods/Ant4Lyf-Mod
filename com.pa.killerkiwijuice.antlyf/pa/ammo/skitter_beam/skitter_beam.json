@@ -4,5 +4,10 @@
     "fx_beam_spec": "/pa/effects/specs/skitter_beam.pfx",
     "fx_collision_spec": "",
     "collision_audio": "/SE/Impacts/laser_blast",
-    "damage": 0
+    "damage": 0,
+    "recon": {
+        "observable": {
+            "ignore_radar": true
+        }
+    }
 }
