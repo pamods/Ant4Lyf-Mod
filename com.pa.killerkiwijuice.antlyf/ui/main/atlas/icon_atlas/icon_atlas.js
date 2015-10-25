@@ -116,7 +116,6 @@ $(document).ready(function () {
             'control_module',
             'control_point',
             'mining_platform'
-
         ]);
 
         self.sendIconList = function () {

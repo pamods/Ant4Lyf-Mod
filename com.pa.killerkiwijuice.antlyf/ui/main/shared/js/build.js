@@ -1,9 +1,31 @@
+var Build = (function() {
+    var FALLBACK_ICON = 'coui://ui/main/game/live_game/img/build_bar/img_missing_unit.png';
+    var pathWithoutExtensionMatch = /(.*)\.json[^\/]*$/;
 
-function BuildHotkeyModel() {
-    var self = this;
+    var iconForSpecId = function(id)
+    {
+        var match = null;
+        if (id)
+            match = pathWithoutExtensionMatch.exec(id);
 
-    self.SpecIdToGridMap = ko.observable(
-        {
+        if (_.size(match) < 2)
+            return FALLBACK_ICON;
+
+        return 'coui:/' + match[1] + '_icon_buildbar.png';
+    };
+
+    var iconForUnit = function (unit)
+    {
+        if (!unit)
+            return FALLBACK_ICON;
+        return iconForSpecId(unit.id);
+    };
+
+    var HotkeyModel = function() {
+        var self = this;
+
+        self.SpecIdToGridMap = ko.observable(
+            {
             "/pa/units/land/control_module/control_module.json": ["utility", 1],
             "/pa/units/land/radar_adv/radar_adv.json": ["utility", 2],
             "/pa/units/land/energy_plant_adv/energy_plant_adv.json": ["utility", 3],
@@ -13,7 +35,7 @@ function BuildHotkeyModel() {
             "/pa/units/land/energy_plant/energy_plant.json": ["utility", 8],
             "/pa/units/land/metal_extractor/metal_extractor.json": ["utility", 9],
             "/pa/units/land/land_barrier/land_barrier.json": ["utility", 10],
-            "/pa/units/land/teleporter/teleporter.json": ["utility", 11],
+            "/pa/units/land/teleporter/teleporter.json": ["utility", 15],
             "/pa/units/orbital/deep_space_radar/deep_space_radar.json": ["utility", 12],
             "/pa/units/land/energy_storage/energy_storage.json": ["utility", 13],
             "/pa/units/land/metal_storage/metal_storage.json": ["utility", 14],
@@ -30,7 +52,7 @@ function BuildHotkeyModel() {
 
             "/pa/units/land/laser_defense_adv/laser_defense_adv.json": ["combat", 0],                   
             "/pa/units/land/tactical_missile_launcher/tactical_missile_launcher.json": ["combat", 2],
-            "/pa/units/land/laser_defense/laser_defense.json": ["combat", 5],
+            "/pa/units/land/laser_defense/laser_defense.json": ["combat", 1],
             "/pa/units/land/air_defense_adv/air_defense_adv.json": ["combat", 6],       
             "/pa/units/land/artillery_long/artillery_long.json": ["combat", 7],
             "/pa/units/sea/torpedo_launcher_adv/torpedo_launcher_adv.json": ["combat", 8],
@@ -48,9 +70,9 @@ function BuildHotkeyModel() {
             "/pa/units/land/tank_heavy_armor/tank_heavy_armor.json": ["vehicle", 7],
             "/pa/units/land/tank_heavy_mortar/tank_heavy_mortar.json": ["vehicle", 8],
             "/pa/units/land/fabrication_vehicle/fabrication_vehicle.json": ["vehicle", 10],                        
-            "/pa/units/land/tank_light_laser/tank_light_laser.json": ["vehicle", 11],
+            "/pa/units/land/tank_light_laser/tank_light_laser.json": ["vehicle", 15],
             "/pa/units/land/tank_destroyer/tank_destroyer.json": ["vehicle", 12],
-            "/pa/units/land/tank_explosive/tank_explosive.json": ["vehicle", 5],
+            "/pa/units/land/tank_explosive/tank_explosive.json": ["vehicle", 12],
             //"/pa/units/land/tank_armor/tank_armor.json": ["vehicle", 12],
             "/pa/units/land/land_scout/land_scout.json": ["vehicle", 13],
             "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle.json": ["vehicle", 14],            
@@ -69,10 +91,10 @@ function BuildHotkeyModel() {
             
             "/pa/units/orbital/orbital_laser/orbital_laser.json": ["orbital", 6],
             "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv.json": ["orbital", 7],
-            "/pa/units/orbital/solar_array/solar_array.json": ["orbital", 5],
+            "/pa/units/orbital/solar_array/solar_array.json": ["orbital", 15],
             "/pa/units/orbital/defense_satellite/defense_satellite.json": ["orbital", 14],           
             "/pa/units/orbital/orbital_fabrication_bot/orbital_fabrication_bot.json": ["orbital", 10],
-            "/pa/units/orbital/orbital_fighter/orbital_fighter.json": ["orbital", 11],
+            "/pa/units/orbital/orbital_fighter/orbital_fighter.json": ["orbital", 16],
             "/pa/units/orbital/radar_satellite/radar_satellite.json": ["orbital", 12],
             "/pa/units/orbital/orbital_lander/orbital_lander.json": ["orbital", 13],
             "/pa/units/orbital/orbital_factory/orbital_factory.json": ["orbital", 9],
@@ -99,6 +121,13 @@ function BuildHotkeyModel() {
             "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json": ["ammo", 13],
             "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json": ["ammo", 14],
             "/pa/units/land/nuke_launcher/nuke_launcher_tac_ammo.json": ["ammo", 13],
-        }
-    );
-};
+            }
+        );
+    };
+
+    return {
+        iconForSpecId: iconForSpecId,
+        iconForUnit: iconForUnit,
+        HotkeyModel: HotkeyModel,
+    };
+})();
