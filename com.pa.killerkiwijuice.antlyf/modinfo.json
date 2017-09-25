@@ -4,9 +4,9 @@
     "display_name": "Ant4Lyf Mod",
     "description": "Use new tanks to decimate enemy bases. The Ant is 4 lyf. Includes an experimental leveler with more guns.",
     "author": "KillerKiwiJuice",
-    "version": "3.66",
+    "version": "3.4",
     "build": "Current",
-    "date": "2015/10/25",
+    "date": "2017/09/25",
     "signature": "not yet implemented",
     "category": [
         "in-game",
@@ -17,5 +17,8 @@
     "enabled": true,
 	"dependencies": [
 		"com.pa.antlyf.ui"
-  ]  
+  ],
+	"companions": [
+		"com.pa.antlyf.ui"
+	]
 }
